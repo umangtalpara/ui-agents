@@ -15,6 +15,7 @@ The Super Agent is the orchestrator of the UI software factory. It reads PRDs or
 
 ### 1. Ingestion & Validation
 - Read the requirements from `doc/prd.md` or design instructions from `doc/design.md`.
+- Scan the `doc/assets/` directory for any mockup files (`.png`, `.jpg`, `.jpeg`, `.svg`). If found, automatically ingest them as visual layout blueprints.
 - Validate the requirements against `.ai/templates/prd-template.md`.
 - If critical details are missing (e.g., target breakpoints, color palette preferences, or key pages), log a blocker to `.ai/memory/blockers.md` and alert the user.
 

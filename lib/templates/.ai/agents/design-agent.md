@@ -13,7 +13,7 @@ The Design Agent reads raw design inputs (Figma mockups, screenshot images, text
 ## Core Responsibilities
 
 ### 1. Ingest Design Specs
-- Scan the input file `doc/design.md` or `doc/prd.md` for design references (e.g., links to wireframes, layout grids, and visual samples).
+- Scan the `doc/assets/` directory for visual mockups and automatically ingest them. Also scan the input file `doc/design.md` or `doc/prd.md` for design references (e.g., links to wireframes, layout grids, and visual samples).
 - Extract design tokens:
   - Color palettes (Primary, Secondary, Accent, Backgrounds, Borders)
   - Typography scales (Hero, Header 1, Header 2, Subtitles, Body)

@@ -54,6 +54,7 @@
 
 ## Input
 - `doc/design.md` — Figma link, image layouts, or wireframe descriptions.
+- `doc/assets/` — Mockup images folder (automatically scanned by agent).
 - `.ai/templates/prd-template.md` — Standard formatting layout.
 
 ## Output
@@ -61,6 +62,7 @@
 - `.ai/project-management/project-status.md` — Updated status to "Ingestion Complete".
 
 ## Validation Rules
-1. All target pages mentioned in design spec must exist in PRD.
-2. Color guidelines must map to HSL variables.
-3. Interactive state animations must be declared.
+1. The agent must automatically scan `doc/assets/` and ingest all image files (`.png`, `.jpg`, `.jpeg`, `.svg`) as design blueprints.
+2. All target pages mentioned in design specifications or found in mockup images must exist in the PRD.
+3. Color guidelines must map to HSL variables.
+4. Interactive state animations must be declared.
