@@ -4,7 +4,7 @@
   "description": "Autonomous multi-agent UI software development factory",
   "main": "index.js",
   "bin": {
-    "ui-agent": "./bin/cli.js"
+    "ui-agent": "bin/cli.js"
   },
   "scripts": {
     "test": "node test.js"
