@@ -28,13 +28,13 @@ Bind scale adjustments and glowing borders:
 </div>
 ```
 
-## 2. Layout Grid Scaling
-Always check elements at mobile widths:
+## 2. Layout Grid Scaling & Theme Matching
 - Standard flex layout columns: `flex flex-col md:flex-row gap-6`.
 - Standard grid layouts: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8`.
-- Ensure you wrap primary views in a container class:
+- Ensure you wrap primary views in a container class, utilizing the color tokens extracted from Figma:
   ```tsx
-  <main className="min-h-screen bg-slate-950 text-slate-100 selection:bg-cyan-500 selection:text-slate-950">
+  {/* Replace bg-slate-950 and text-slate-100 with the extracted brand colors */}
+  <main className="min-h-screen bg-brand-background text-brand-text selection:bg-brand-accent selection:text-brand-contrast">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* View Modules */}
     </div>

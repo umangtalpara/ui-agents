@@ -6,24 +6,23 @@ These guidelines define the design system, colors, aesthetics, typography, and r
 
 To construct premium, modern user interfaces that represent a state-of-the-art enterprise identity, use these core design tokens:
 
-### A. Color Palette
-Never use raw/generic CSS colors (like `#ff0000` or `bg-blue-500` blindly). Standardize on this curated, high-end HSL system:
-
-*   **Primary Base**: Deep Electric Navy
-    *   Dark backgrounds: `hsl(222.2, 84%, 4.9%)` (Tailwind slate-950)
-    *   Slate Slate: `hsl(217.2, 32.6%, 17.5%)`
-*   **Accent Glow**: Cyber/Electric Cyan
-    *   Primary: `hsl(180, 100%, 50%)`
-    *   Secondary/Glow: `hsl(190, 95%, 45%)`
-*   **Surface / Glass Panels**:
-    *   High-tech glassmorphism panels: `bg-slate-900/40 backdrop-blur-md border border-slate-800/60`
-    *   White text contrasts: `text-slate-100` and descriptions in `text-slate-400`
+### A. Color Palette & Figma Color Locking (Mandatory)
+- **Direct Color Extraction**: The agent MUST inspect the Figma design link or screenshot images to identify the exact brand color palette (Primary, Secondary, Accent, Background, Borders, Text).
+- **No Random Colors**: Do not invent random styling colors (e.g. standard Tailwind `bg-blue-600` or random hexes) that are not present in the Figma/screenshot design. Extract the exact hex codes and set them up as variables.
+- **Fallback Color Palette**: Only if no design inputs/screenshots are provided, use this curated, high-end HSL system:
+  *   **Primary Base**: Deep Electric Navy
+      *   Dark backgrounds: `hsl(222.2, 84%, 4.9%)` (Tailwind slate-950)
+      *   Slate Slate: `hsl(217.2, 32.6%, 17.5%)`
+  *   **Accent Glow**: Cyber/Electric Cyan
+      *   Primary: `hsl(180, 100%, 50%)`
+      *   Secondary/Glow: `hsl(190, 95%, 45%)`
+  *   **Surface / Glass Panels**:
+      *   High-tech glassmorphism panels: `bg-slate-900/40 backdrop-blur-md border border-slate-800/60`
+      *   White text contrasts: `text-slate-100` and descriptions in `text-slate-400`
 
 ### B. Glassmorphism & Visual Gradients
-- Implement linear gradients for buttons, title cards, and background rings:
-  `bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-700`
-- Use background radial or linear ambient blobs to break flat surfaces:
-  `bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-900/20 via-slate-950 to-slate-950`
+- Implement linear gradients for buttons, title cards, and background elements ONLY if it matches the visual mockup/Figma style. Otherwise, strictly adhere to flat, solid, or rounded designs specified in the screenshots.
+- Use radial or linear ambient blobs for background depth if appropriate for the extracted brand style.
 
 ### C. Typography
 - Standardize on modern sans-serif fonts: **Outfit**, **Inter**, or **Roboto**.
