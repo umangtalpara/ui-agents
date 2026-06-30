@@ -1,0 +1,10 @@
+---
+description: Core UI Agent project rules and conventions
+alwaysApply: true
+---
+Follow @AGENTS.md.
+Refer to @.ai/settings.json for the active stack configuration.
+Style guidelines: @.ai/context/ui-guidelines.md
+Coding rules: @.ai/context/coding-rules.md
+Architecture layout: @.ai/context/architecture-rules.md
+Naming files & folders: @.ai/context/naming-rules.md

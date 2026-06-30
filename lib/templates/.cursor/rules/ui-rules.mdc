@@ -1,0 +1,8 @@
+---
+description: Premium UI styling tokens, colors, HSL guidelines, and glassmorphism rules
+globs: codebase/**/*.tsx, codebase/**/*.jsx, codebase/**/*.css
+---
+Always follow the styling standards defined in @.ai/context/ui-guidelines.md.
+Ensure you use the Electric Navy background bases and Cyan highlights HSL colors.
+Implement glassmorphism panels, transitions on hovers, and clean responsive grids.
+Check mobile breakpoints down to 320px width.

@@ -1,0 +1,26 @@
+{
+  "name": "@umangtalpara/ui-agent",
+  "version": "1.0.0",
+  "description": "Autonomous multi-agent UI software development factory",
+  "main": "index.js",
+  "bin": {
+    "ui-agent": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "ui",
+    "agent",
+    "ai",
+    "umangtalpara",
+    "figma",
+    "prd"
+  ],
+  "author": "Umang Talpara",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.1.0",
+    "fs-extra": "^11.2.0"
+  }
+}

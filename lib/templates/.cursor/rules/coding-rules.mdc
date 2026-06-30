@@ -1,0 +1,9 @@
+---
+description: React coding conventions, semantic markup, classname merging, and accessibility targets
+globs: codebase/**/*.tsx, codebase/**/*.jsx, codebase/**/*.ts
+---
+Always follow the coding conventions defined in @.ai/context/coding-rules.md.
+Write pure React functional components.
+Merge Tailwind styles using the @cn helper class.
+Verify tap targets are >= 48px * 48px.
+Check semantic tags and tab key focus outlines.

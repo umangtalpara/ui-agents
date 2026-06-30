@@ -1,0 +1,79 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "Responsive UI Factory",
+    "description": "Autonomous multi-agent UI software development factory",
+    "organization": "Umang Talpara",
+    "created": "2026-06-30",
+    "status": "initialized"
+  },
+  "agents": {
+    "super-agent": {
+      "role": "Master Orchestrator & Validator",
+      "file": "agents/super-agent.md"
+    },
+    "design-agent": {
+      "role": "Figma & Design Schema Parser",
+      "file": "agents/design-agent.md"
+    },
+    "ui-developer-agent": {
+      "role": "Responsive React/HTML/CSS Coder",
+      "file": "agents/ui-developer-agent.md"
+    },
+    "responsive-qa-agent": {
+      "role": "Responsive Breakpoints & Accessibility Tester",
+      "file": "agents/responsive-qa-agent.md"
+    },
+    "code-review-agent": {
+      "role": "Aesthetic & Code Quality Auditor",
+      "file": "agents/code-review-agent.md"
+    }
+  },
+  "workflow": {
+    "pipeline": [
+      "design-to-prd",
+      "prd-to-ui-plan",
+      "ui-generation",
+      "responsive-a11y-check",
+      "final-review"
+    ]
+  },
+  "tech_stack": {
+    "frontend": {
+      "framework": "React v19 (Next.js 14+ or Vite)",
+      "styling": "Tailwind CSS v3+ & Vanilla CSS",
+      "animations": "Framer Motion & GSAP ScrollTrigger",
+      "utilities": [
+        "clsx",
+        "tailwind-merge",
+        "lucide-react"
+      ],
+      "design_system": {
+        "theme": "Electric Navy & Cyber Cyan",
+        "features": [
+          "Glassmorphism",
+          "HSL Custom Gradients",
+          "Responsive Flex/Grid",
+          "Accessible Font Scaling"
+        ]
+      }
+    },
+    "validation": {
+      "viewport": "width=device-width, initial-scale=1",
+      "touch_targets": ">= 48px * 48px",
+      "contrast": "WCAG 2.1 AA (>= 4.5:1)"
+    }
+  },
+  "paths": {
+    "agents": ".ai/agents",
+    "skills": ".ai/skills",
+    "workflows": ".ai/workflows",
+    "context": ".ai/context",
+    "memory": ".ai/memory",
+    "project_management": ".ai/project-management",
+    "templates": ".ai/templates",
+    "prd": "doc/prd.md",
+    "design": "doc/design.md",
+    "source_code": "codebase"
+  }
+}
