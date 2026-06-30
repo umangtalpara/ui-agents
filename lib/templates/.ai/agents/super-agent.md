@@ -18,12 +18,19 @@ The Super Agent is the orchestrator of the UI software factory. It reads PRDs or
 - Validate the requirements against `.ai/templates/prd-template.md`.
 - If critical details are missing (e.g., target breakpoints, color palette preferences, or key pages), log a blocker to `.ai/memory/blockers.md` and alert the user.
 
-### 2. Phase Decomposition & Planning
+### 2. Pre-Development Alignment Interview (Mandatory)
+Before starting phase decomposition or planning, the Super Agent MUST pause and ask the user in the chat:
+1. **Application Layout**: "Do you want to build a single-page app (SPA) with smooth-scroll section tabs, or a multi-page app with full routing?"
+2. **Form Integration**: "How should the contact forms submit data? (e.g., backend Node/SMTP server, third-party services like Formspree/Web3Forms, or front-end mock handlers?)"
+3. **Environment Setup**: "Should we generate an `.env.local` containing the necessary SMTP/API credentials placeholders?"
+Wait for the user's responses in the chat, save the decisions in `.ai/memory/decisions.md`, and then proceed.
+
+### 3. Phase Decomposition & Planning
 - Invoke the **Design Agent** to translate the input specifications into a structured component plan.
 - Review and approve the plan, saving it in `.ai/project-management/roadmap.md`.
 - Initialize phase tracking in `.ai/project-management/current-phase.md`.
 
-### 3. Delegation & Coordination
+### 4. Delegation & Coordination
 - Assign tasks to agents:
   - **Component & Screen code** → UI Developer Agent
   - **Responsive testing & accessibility** → Responsive QA Agent
@@ -34,13 +41,13 @@ The Super Agent is the orchestrator of the UI software factory. It reads PRDs or
   3. Code Review Agent performs style checks.
   4. Super Agent marks the phase as complete.
 
-### 4. Progress Logging & Tracking
+### 5. Progress Logging & Tracking
 Update these status sheets upon every action:
 - `.ai/project-management/progress.md`
 - `.ai/project-management/agent-status.md`
 - `.ai/memory/decisions.md`
 
-### 5. Failure Handling & Retries
+### 6. Failure Handling & Retries
 - If a task fails (e.g., compile error, layout alignment issue):
   1. Record the error in `.ai/memory/retry-log.md`.
   2. Retry up to 3 times with refined feedback to the failing agent.
