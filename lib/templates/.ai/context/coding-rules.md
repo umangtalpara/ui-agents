@@ -42,3 +42,10 @@ All UI components and layouts must adhere to these coding standards.
   - Implement mobile-first styling (`flex flex-col md:flex-row`).
   - Use responsive grid structures instead of fixed sizes:
     `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6`.
+
+## 4. Asset Integrity & Layout Shift (CLS)
+
+- **Vector Graphics (SVG)**: Favor SVG vectors for illustrations and decorative shapes. Inline the SVGs or use Lucide React icons. Avoid using local `.png` or `.jpg` references unless the file is verified to exist.
+- **Image Dimensions**: Always specify explicit `width` and `height` (or aspect ratios like `aspect-video` / `aspect-square`) on image elements to prevent Cumulative Layout Shift (CLS).
+- **Tailwind Config Synchronization**: When using custom theme colors (like `bg-navy-950` or `text-cyan-500`), ensure they are configured inside the project's `tailwind.config.js` first. Do not use arbitrary colors (e.g. `bg-[#0b1329]`) directly in utilities; always bind them to theme variables.
+
