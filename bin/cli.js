@@ -27,10 +27,22 @@ program
     }
 
     try {
-      // Copy all template files recursively
+      // Copy all template files recursively, keeping user documents safe
       fs.copySync(sourceDir, targetDir, {
         overwrite: true,
         errorOnExist: false,
+        filter: (src, dest) => {
+          const relativePath = path.relative(sourceDir, src).replace(/\\/g, '/');
+          const protectedPaths = [
+            'doc/prd.md',
+            'doc/design.md',
+            'doc/how-to-use-ai.md'
+          ];
+          if (protectedPaths.includes(relativePath) && fs.existsSync(dest)) {
+            return false; // Skip overwriting user's active document inputs
+          }
+          return true;
+        }
       });
       console.log('✅ Workspace template files copied successfully.');
 
