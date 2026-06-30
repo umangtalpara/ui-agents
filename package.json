@@ -1,6 +1,6 @@
 {
   "name": "@umangtalpara/ui-agent",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Autonomous multi-agent UI software development factory",
   "main": "index.js",
   "bin": {
