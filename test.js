@@ -37,6 +37,7 @@ try {
     'doc/prd.md',
     'doc/design.md',
     'doc/how-to-use-ai.md',
+    'doc/assets/.gitkeep',
     '.ai/settings.json',
     '.ai/context/ui-guidelines.md',
     '.ai/context/coding-rules.md',

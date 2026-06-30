@@ -8,7 +8,7 @@ Use this file to provide visual resources, mockups, or layout assets for the age
 - **Figma Design Link**: [Paste your Figma workspace URL here]
 - **Wireframe Descriptions**: [Describe the layout: e.g., Left-aligned logo, Centered navbar links, Right-aligned Action button]
 - **Screenshots / Visuals**:
-  - Add screenshots as Markdown image links (e.g. `![Landing wireframe](./wireframe-landing.png)`)
+  - Copy your mockup images into the `doc/assets/` folder, then list them here as image links (e.g., `![Screen 1](./assets/my-homepage.png)`).
 
 ## 2. Global Styling Preferences
 - **Base Mode**: [e.g. Dark Mode (Electric Navy)]
