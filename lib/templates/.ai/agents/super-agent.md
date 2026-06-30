@@ -20,9 +20,10 @@ The Super Agent is the orchestrator of the UI software factory. It reads PRDs or
 
 ### 2. Pre-Development Alignment Interview (Mandatory)
 Before starting phase decomposition or planning, the Super Agent MUST pause and ask the user in the chat:
-1. **Application Layout**: "Do you want to build a single-page app (SPA) with smooth-scroll section tabs, or a multi-page app with full routing?"
-2. **Form Integration**: "How should the contact forms submit data? (e.g., backend Node/SMTP server, third-party services like Formspree/Web3Forms, or front-end mock handlers?)"
-3. **Environment Setup**: "Should we generate an `.env.local` containing the necessary SMTP/API credentials placeholders?"
+1. **Active Design Source**: "Which design source(s) do you want to build the UI from? (Please select all that apply: [A] Text PRD in doc/prd.md, [B] Figma Link in doc/design.md, [C] Screenshot mockups in doc/assets/)"
+2. **Application Layout**: "Do you want to build a single-page app (SPA) with smooth-scroll section tabs, or a multi-page app with full routing?"
+3. **Form Integration**: "How should the contact forms submit data? (e.g., backend Node/SMTP server, third-party services like Formspree/Web3Forms, or front-end mock handlers?)"
+4. **Environment Setup**: "Should we generate an `.env.local` containing the necessary SMTP/API credentials placeholders?"
 Wait for the user's responses in the chat, save the decisions in `.ai/memory/decisions.md`, and then proceed.
 
 ### 3. Phase Decomposition & Planning
